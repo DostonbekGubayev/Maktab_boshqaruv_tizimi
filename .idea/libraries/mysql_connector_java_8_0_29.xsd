@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="component" type="componentType"/>
+  <xs:complexType name="libraryType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="CLASSES"/>
+      <xs:element type="xs:string" name="JAVADOC"/>
+      <xs:element type="xs:string" name="SOURCES"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="name"/>
+  </xs:complexType>
+  <xs:complexType name="componentType">
+    <xs:sequence>
+      <xs:element type="libraryType" name="library"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="name"/>
+  </xs:complexType>
+</xs:schema>
